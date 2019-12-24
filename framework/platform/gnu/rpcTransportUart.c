@@ -137,7 +137,7 @@ int32_t rpcTransportOpen(char *_devicePath, uint32_t port)
 	 CREAD   : enable receiving characters*/
 	tio.c_cflag = B115200 | CS8 | CLOCAL | CREAD;
 #ifndef CC26xx
-	tio.c_cflag |= CRTSCTS;
+	// tio.c_cflag |= CRTSCTS;
 #endif //CC26xx
 	/* c-iflags
 	 ICRNL   : maps 0xD (CR) to 0x10 (LR), we do not want this.
